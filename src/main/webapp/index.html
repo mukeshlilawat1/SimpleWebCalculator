@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<title>Bootstrap Calculator Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<style>
+body {
+	background-color: #f0f8ff;
+}
+
+.calculator-container {
+	max-width: 500px;
+	margin: 80px auto;
+	padding: 30px;
+	border-radius: 15px;
+	background-color: #ffffff;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="calculator-container">
+			<h2 class="text-center mb-4">Simple Calculator</h2>
+
+			<form action="servlet1" method="post">
+				<div class="mb-3">
+					<label for="fn" class="form-label">First Number</label> <input
+						type="text" class="form-control" id="fn" name="fn"
+						placeholder="Enter first number" required>
+				</div>
+
+				<div class="mb-3">
+					<label for="sn" class="form-label">Second Number</label> <input
+						type="text" class="form-control" id="sn" name="sn"
+						placeholder="Enter second number" required>
+				</div>
+
+				<div class="mb-4">
+					<label for="op" class="form-label">Select Operation</label> <select
+						class="form-select" name="op" id="op" required>
+						<option value="+">Addition (+)</option>
+						<option value="-">Subtraction (-)</option>
+						<option value="*">Multiplication (*)</option>
+						<option value="/">Division (/)</option>
+						<option value="%">Modulus (%)</option>
+						<option value="^">Power (x<sup>y</sup>)
+						</option>
+						<option value="max">Maximum (max(x, y))</option>
+						<option value="min">Minimum (min(x, y))</option>
+					</select>
+				</div>
+
+
+				<div class="d-grid">
+					<button type="submit" class="btn btn-primary">Calculate</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
